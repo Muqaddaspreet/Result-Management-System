@@ -1,0 +1,34 @@
+<body>
+    <nav class="navbar">
+        <div class="col-sm-12"><span class="mx-auto" style="text-align:center;">Student Management System</span>
+            <div class="logoutbutton"><a href="/studentlogin" class="btn btn-danger btn-small btn-nav">Logout</a></div>
+        </div>
+    </nav>
+    <div class="container col-sm-6 mx-auto">
+        <h4>Result</h4>
+        <table class="table">
+            <tbody>
+              <tr>
+                <th>Roll No :</th>
+                <td>{{currstudent.rollnumber}}</td>
+              </tr>
+              <tr>
+                <th>Name :</th>
+                <td>{{currstudent.sname}}</td>
+              </tr>
+              <tr>
+                <th>DOB :</th>
+                <td>{{currstudent.dob}}</td>
+              </tr>
+              <tr>
+                <th>Score :</th>
+                <td>{{currstudent.score}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+<footer>
+    <span>&copy Copyrights Reserved</span>
+</footer>

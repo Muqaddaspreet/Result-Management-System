@@ -1,0 +1,49 @@
+<body>
+    <nav class="navbar">Student Management System</nav>
+    <a href="/teachercontrol" style="color:blue">Back</a>
+    <div class="container col-sm-4 mx-auto">
+        <div>
+            <div *ngIf= "alert" class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Success!</strong> Your data has been submitted successfully.
+                <button (click)= "CloseAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <h4>Add Record</h4>
+            
+            <form [formGroup]= "addstudent" (ngSubmit)= "addStudent()">
+                <div class="form-group">
+                    <label class="col-sm-12 form-label" for="roll">Roll Number : </label>
+                    <div class="col-sm-12">
+                        <input type="number" placeholder="Enter the roll number" id="roll" formControlName= "rollnumber" required class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-12" for="name">Name : </label>
+                    <div class="col-sm-12">
+                        <input type="text" placeholder="Enter the name" id="name" formControlName="sname" required class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-12" for="dob">DOB : </label>
+                    <div class="col-sm-12">
+                        <input type="date" placeholder="Enter the" id="dob" formControlName="dob" required class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-12" for="score">Score : </label>
+                    <div class="col-sm-12">
+                        <input type="number" placeholder="Enter the score" id="score" formControlName="score" class="form-control" required>
+                    </div>
+                </div>
+                <br>
+                <button class="result btn btn-primary" type="submit" >Submit</button>
+                <!-- <a class="result btn btn-primary" href="/teacher/addrecord" >Clear</a> -->
+            </form>
+            
+        </div>
+    </div>
+</body>
+<footer>
+    <span>&copy Copyrights Reserved</span>
+</footer>

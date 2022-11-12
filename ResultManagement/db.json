@@ -1,0 +1,25 @@
+{
+  "student": [
+    {
+      "rollnumber": 1,
+      "sname": "Ram",
+      "dob": "2000-03-21",
+      "score": 455,
+      "id": 5
+    },
+    {
+      "rollnumber": 4,
+      "sname": "Sohan",
+      "dob": "1999-12-12",
+      "score": 236,
+      "id": 6
+    }
+  ],
+  "teacher": [
+    {
+      "id": 1,
+      "temail": "teacher@gmail.com",
+      "tpass": "123"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+<body>
+    <nav class="navbar">Student Management System</nav>
+    <a href="/" style="color:blue">Back</a>
+    <div class="container col-sm-4 mx-auto">
+        <div>
+            <div *ngIf= "alert">
+                <div *ngIf= "status; then ifBlock else elseBlock">
+                </div>
+                <ng-template #ifBlock>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>{{msg}}</strong> {{str}}
+                        <button (click)= "CloseAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </ng-template>
+                <ng-template #elseBlock>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>{{msg}}</strong> {{str}}
+                        <button (click)= "CloseAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </ng-template>
+            </div>
+            
+            <h4>Find Result</h4>
+            <form class="form-hotizontal" [formGroup]="loginData" (ngSubmit)= "Login()">
+                
+                <div class="form-group">
+                    <label class="col-sm-12" for="email">Email ID: </label>
+                    <div class="col-sm-12">
+                        <input type="email" placeholder="Enter your email id"  id="email" formControlName="temail" required class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-12" for="password">Password : </label>
+                    <div class="col-sm-12">
+                        <input type="password" placeholder="Enter your password" id="password" formControlName="tpass" required class="form-control">
+                    </div>
+                </div>
+                <br>
+                <button class="result btn btn-primary" type="submit" >Login</button>
+                <!-- <a class="result btn btn-primary" href="/teacher/login" >Clear</a> -->
+            </form>
+            
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+<footer>
+    <span>&copy Copyrights Reserved</span>
+</footer>
